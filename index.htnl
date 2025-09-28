@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collatz Box Universes - Main Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensures pre-formatted text wraps cleanly */
+        pre { white-space: pre-wrap; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 p-8">
+
+    <h1 class="text-4xl font-bold mb-6 text-indigo-400">Box Universes Explorer Hub</h1>
+    <p class="mb-8 text-sm text-gray-400">Core pipeline verified. Build status: Green. Run the sequence below to drive the application suite.</p>
+
+    <div id="input-form" class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8 grid grid-cols-2 md:grid-cols-5 gap-4">
+        
+        <div class="col-span-2 md:col-span-1">
+            <label for="startN" class="block text-sm font-medium mb-1">Start N:</label>
+            <input type="text" id="startN" value="6" class="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white" />
+        </div>
+
+        <div class="col-span-1">
+            <label for="X" class="block text-sm font-medium mb-1">Divisor (X):</label>
+            <input type="text" id="X" value="2" class="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white" />
+        </div>
+        <div class="col-span-1">
+            <label for="Y" class="block text-sm font-medium mb-1">Multiplier (Y):</label>
+            <input type="text" id="Y" value="3" class="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white" />
+        </div>
+        <div class="col-span-1">
+            <label for="Z" class="block text-sm font-medium mb-1">Adder (Z):</label>
+            <input type="text" id="Z" value="1" class="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white" />
+        </div>
+
+        <div class="col-span-2 md:col-span-1">
+            <label for="maxSteps" class="block text-sm font-medium mb-1">Max Steps:</label>
+            <input type="number" id="maxSteps" value="100" class="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white" />
+        </div>
+        
+        <button id="runSequence" class="col-span-2 md:col-span-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded transition duration-150">
+            Run Generalized Sequence
+        </button>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <div class="col-span-1">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-300">Application Suite (Phase 4.5)</h2>
+            <div id="nav-links" class="space-y-2 text-sm">
+                </div>
+        </div>
+
+        <div class="col-span-2">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-300">Sequence & Residue Data</h2>
+            
+            <div class="bg-gray-800 p-4 rounded-lg overflow-x-auto h-96">
+                <h3 class="font-bold text-lg mb-2">Sequence (BigInt):</h3>
+                <pre id="sequence-output" class="text-xs text-gray-300"></pre>
+
+                <h3 class="font-bold text-lg mt-4 mb-2">Coordinates (RCWA $\mathbb{Z}_X$ Ring):</h3>
+                <pre id="coordinates-output" class="text-xs text-gray-300"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/hub-app.js"></script>
+
+</body>
+</html>

@@ -31,7 +31,7 @@ export function mapSequenceToCoordinates(bigIntSequence, X) {
 
         return { 
             x: x_coord, 
-            y: y_coord, 
+         y: y_coord, 
             z: z_coord, 
             residue: y_coord // Explicit residue class for color coding and filtering
         };
