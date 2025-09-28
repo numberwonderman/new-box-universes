@@ -1,0 +1,21 @@
+{
+  "name": "collatz-box-universes",
+  "version": "1.0.0",
+  "description": "A suite of explorers for the generalized Collatz conjecture, using BigInt and modular architecture.",
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [
+    "collatz",
+    "number-theory",
+    "bigint",
+    "visualization",
+    "threejs"
+  ],
+  "author": "Mr K",
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
+}
