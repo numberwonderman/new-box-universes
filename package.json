@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "vitest"
+   
   },
   "keywords": [
     "collatz",

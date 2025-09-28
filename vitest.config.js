@@ -12,6 +12,6 @@ export default defineConfig({
     // Ensures tests are run in a node-like environment, critical for BigInt
     environment: 'node', 
     // Match the tests directory
-    include: ['tests/**/*.test.js'],
+        include: ['./tests/**/*.test.js'],
   },
 });
